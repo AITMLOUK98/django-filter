@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="get" action="{% url 'index' %}">
+    {{ form.as_p }}
+    <input type="submit" value="submit"  class="btn btn-primary">
+</form>
+
+
+<hr>
+<h2 style="margin-top:20px; margin-bottom:20px;">Book List</h2>
+<table class="table">
+    <thead>
+       <tr>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Gener</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+        <tbody>
+            {% for book in books %}
+                <tr>
+                    <td>{{book.name}}</td>
+                    <td>{{book.auther.name}}</td>
+                    <td>{{book.get_gener_display}}</td>
+                    <td>{{book.price}}</td>
+
+                </tr>
+            {% endfor %}
+
+
+        </tbody>
+    </table>
+
+
+{% endblock %}
