@@ -19,7 +19,7 @@ To install Django Filter, follow these steps:
 
 2. Install Django Filter using pip:
 
-source ```pip install django-filter```
+```pip install django-filter```
 
 3. Add 'django_filters' to your Django project's `INSTALLED_APPS` setting in the settings.py file:
 ```python
